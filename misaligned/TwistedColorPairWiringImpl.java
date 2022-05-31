@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class TwistedColorPairCablingImpl implements TwistedColorPairCabling {
+public class TwistedColorPairWiringImpl implements TwistedColorPairWiring {
 
     @Override
     public List<TwistedColorPair> generateTwistedPairCabling(String[] majorColorNames, String[] minorColorNames) {

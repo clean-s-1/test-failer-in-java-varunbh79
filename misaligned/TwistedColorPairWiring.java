@@ -1,6 +1,6 @@
 import java.util.List;
 
-public interface TwistedColorPairCabling {
+public interface TwistedColorPairWiring {
 
     List<TwistedColorPair> generateTwistedPairCabling(String[] majorColorNames,String[] minorColorNames);
 }
