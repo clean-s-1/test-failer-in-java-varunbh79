@@ -17,7 +17,7 @@ public class MisalignedTwistedColorPairTest {
         final String[] minorColors = {"Blue", "Orange", "Green", "Brown", "Slate"};
         TwistedColorPairWiring twistedColorPairWiring = new TwistedColorPairWiringImpl();
         TwistedColorPairPrinter twistedColorPairPrinter = new TwistedColorPairPrinterImpl();
-        List<TwistedColorPair> twistedPairList = twistedColorPairWiring.generateTwistedColorPairWiring(majorColors,minorColors);
+        List<TwistedColorPair> twistedPairList = twistedColorPairWiring.generateTwistedColorPairCombination(majorColors,minorColors);
         printTwistedPairColorCode(twistedColorPairPrinter,twistedPairList);
         testColorPairCombination(twistedPairList.get(0));
         int result = twistedPairList.size();
