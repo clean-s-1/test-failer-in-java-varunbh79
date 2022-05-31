@@ -4,10 +4,10 @@ public class TwistedColorPairPrinterImpl implements TwistedColorPairPrinter{
 
 
     @Override
-    public void printTwistedColorPair(List<TwistedColorPair> twistedPairList) {
+    public void printTwistedColorPair(List<TwistedColorPair> twistedColorPairList) {
 
-        for (TwistedColorPair twistedPair : twistedPairList) {
-            System.out.printf("%d | %s | %s\n", twistedPair.getPair(), twistedPair.getMajorColor(), twistedPair.getMinorColor());
+        for (TwistedColorPair twistedColorPair : twistedColorPairList) {
+            System.out.printf("%d | %s | %s\n", twistedColorPair.getPair(), twistedColorPair.getMajorColor(), twistedColorPair.getMinorColor());
         }
     }
  }

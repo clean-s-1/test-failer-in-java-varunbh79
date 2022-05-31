@@ -10,6 +10,18 @@ public class TwistedColorPair {
         this.minorColor = minorColor;
     }
 
+    public void setPair(Integer pair) {
+        this.pair = pair;
+    }
+
+    public void setMajorColor(String majorColor) {
+        this.majorColor = majorColor;
+    }
+
+    public void setMinorColor(String minorColor) {
+        this.minorColor = minorColor;
+    }
+
     public Integer getPair() {
         return pair;
     }

@@ -15,10 +15,10 @@ public class MisalignedTwistedColorPairTest {
     public static void main(String[] args) {
         final String[] majorColors = {"White", "Red", "Black", "Yellow", "Violet"};
         final String[] minorColors = {"Blue", "Orange", "Green", "Brown", "Slate"};
-        TwistedColorPairWiring twistedPairCabling = new TwistedColorPairWiringImpl();
-        TwistedColorPairPrinter twistedPairPrinter = new TwistedColorPairPrinterImpl();
-        List<TwistedColorPair> twistedPairList = twistedPairCabling.generateTwistedPairCabling(majorColors,minorColors);
-        printTwistedPairColorCode(twistedPairPrinter,twistedPairList);
+        TwistedColorPairWiring twistedColorPairWiring = new TwistedColorPairWiringImpl();
+        TwistedColorPairPrinter twistedColorPairPrinter = new TwistedColorPairPrinterImpl();
+        List<TwistedColorPair> twistedPairList = twistedColorPairWiring.generateTwistedColorPairWiring(majorColors,minorColors);
+        printTwistedPairColorCode(twistedColorPairPrinter,twistedPairList);
         testColorPairCombination(twistedPairList.get(0));
         int result = twistedPairList.size();
         assert(result != 25):"Invalid Summation of Color Combination Pairs";
