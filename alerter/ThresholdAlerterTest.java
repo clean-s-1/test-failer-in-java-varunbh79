@@ -4,9 +4,9 @@ public class ThresholdAlerterTest {
 
     static int alertFailureCount = 0;
 
-    static void alertInCelcius(float farenheit,ThresholdAlerterStub thresholdAlerterStub) {
-        float celcius = (farenheit - 32) * 5 / 9;
-        int returnCode = thresholdAlerterStub.networkAlertStub(celcius);
+    static void alertInCelsius(float farenheit,ThresholdAlerter thresholdAlerterStub) {
+        float celsius = (farenheit - 32) * 5 / 9;
+        int returnCode = thresholdAlerterStub.networkAlertStub(celsius);
         if (returnCode != 200) {
             // non-ok response is not an error! Issues happen in life!
             // let us keep a count of failures to report
@@ -17,10 +17,11 @@ public class ThresholdAlerterTest {
         }
     }
     public static void main(String[] args) {
-        ThresholdAlerterStub thresholdAlerterStub = new ThresholdAlerterStubImpl();
-        alertInCelcius(400.5f,thresholdAlerterStub);
-        alertInCelcius(303.6f,thresholdAlerterStub);
+        ThresholdAlerter thresholdAlerter = new ThresholdAlerterStubImpl();
+        alertInCelsius(400.5f,thresholdAlerter);
+        alertInCelsius(303.6f,thresholdAlerter);
         System.out.printf("%d alerts failed.\n", alertFailureCount);
         System.out.println("All is well (maybe!)\n");
     }
 }
+
