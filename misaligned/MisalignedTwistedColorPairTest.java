@@ -13,13 +13,13 @@ public class MisalignedTwistedColorPairTest {
 
     }
 
-    private static void testTwistedColorPairManualFormat(TwistedColorPairPrinter twistedColorPairPrinter,List<TwistedColorPair> twistedColorPairList) {
+    private static void testTwistedColorPairManualFormat(TwistedColorPairPrinter TwistedColorPairPrinter,List<TwistedColorPair> twistedColorPairList) {
 
-        String expectedColorpairNoManualFormat = twistedColorPairPrinter.getFormattedColorPairString(twistedColorPairList);
+        String expectedColorpairNoManualFormat = TwistedColorPairPrinter.getFormattedColorPairString(twistedColorPairList);
         System.out.println("****Expected Manual Format ********");
         System.out.println(expectedColorpairNoManualFormat);
         System.out.println("*****Actual Manual Format **********");
-        twistedColorPairPrinter.printTwistedColorPair(twistedColorPairList);
+        TwistedColorPairPrinter.printTwistedColorPair(twistedColorPairList);
         String actualColorpairNoManualFormat = TwistedColorPairPrinterImpl.getFormattedColorPairListCache();
         System.out.println(actualColorpairNoManualFormat);
         assert (actualColorpairNoManualFormat.equalsIgnoreCase(expectedColorpairNoManualFormat)): "Mismatch found in Expected and Actual Formats";
@@ -36,9 +36,9 @@ public class MisalignedTwistedColorPairTest {
         final String[] majorColors = {"White", "Red", "Black", "Yellow", "Violet"};
         final String[] minorColors = {"Blue", "Orange", "Green", "Brown", "Slate"};
         TwistedColorPairWiring twistedColorpairWiring = new TwistedColorPairWiringImpl();
-        TwistedColorPairPrinter twistedColorPairPrinter = new TwistedColorPairPrinterImpl();
+        TwistedColorPairPrinter TwistedColorPairPrinter = new TwistedColorPairPrinterImpl();
         List<TwistedColorPair> twistedColorPairList = twistedColorpairWiring.generateTwistedColorPairCombination(majorColors,minorColors);
-        testTwistedColorPairManualFormat(twistedColorPairPrinter,twistedColorPairList);
+        testTwistedColorPairManualFormat(TwistedColorPairPrinter,twistedColorPairList);
         testColorPairCombination(twistedColorPairList.get(0));
         testTwistedColorPairListSize(twistedColorPairList);
         System.out.println("All is well (maybe!)");
