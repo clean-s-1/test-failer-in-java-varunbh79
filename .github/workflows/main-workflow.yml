@@ -15,7 +15,7 @@ jobs:
         distribution: 'zulu'
         java-version: '11'
 
-    - name: tshirts fail
+    - name: tshirts pass
       run: |
         cd tshirts
         java -ea tshirts.java
@@ -25,12 +25,17 @@ jobs:
         cd misaligned
         javac misaligned.java
 
-    - name: misaligned fail
+    - name: misaligned pass
       run: |
         cd misaligned
-        java -ea -classpath . misaligned
+        java -ea  misaligned
 
-    - name: alerter fail
+    - name: Build
       run: |
         cd alerter
-        java -ea alerter.java
+        javac alerter.java    
+
+    - name: alerter pass
+      run: |
+        cd alerter
+        java -ea alerter
