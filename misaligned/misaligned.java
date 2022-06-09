@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class MisalignedTwistedColorPairTest {
+public class misaligned {
 
 
     private static void testColorPairCombination(TwistedColorPair twistedColorpair) {
