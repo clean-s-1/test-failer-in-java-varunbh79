@@ -1,6 +1,6 @@
 
 
-public class ThresholdAlerterStubImpl implements ThresholdAlerter{
+public class ThresholdAlerterStubImpl implements IAlerter{
 
    public Integer networkAlertStub(float celsius) {
         System.out.println("ALERT: Temperature is " + celsius + " celsius");

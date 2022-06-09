@@ -1,6 +1,6 @@
 
 
-public interface ThresholdAlerter {
+public interface IAlerter {
 
     Integer networkAlertStub(float celsius) ;
 }

@@ -9,14 +9,18 @@ public class TwistedColorPairPrinterImpl implements TwistedColorPairPrinter{
     }
 
     @Override
-    public void printTwistedColorPair(List<TwistedColorPair> twistedColorPairList) {
-
+    public String getFormattedColorPairString(List<TwistedColorPair> twistedColorPairList) {
         StringBuilder colorPairManualBuilder = new StringBuilder();
         for (TwistedColorPair twistedColorPair : twistedColorPairList) {
-            colorPairManualBuilder.append(String.format("%d | %s | %s\n",twistedColorPair.getPair(),twistedColorPair.getMajorColor(),twistedColorPair.getMinorColor()));
-            System.out.printf("%d | %s | %s\n", twistedColorPair.getPair(), twistedColorPair.getMajorColor(), twistedColorPair.getMinorColor());
+            colorPairManualBuilder.append(String.format("%d | %s | %s\n",twistedColorPair.getpairNo(),twistedColorPair.getMajorColor(),twistedColorPair.getMinorColor()));
         }
-        formattedColorPairListCache = colorPairManualBuilder.toString();
+        return colorPairManualBuilder.toString();
+    }
+
+    @Override
+    public void printTwistedColorPair(List<TwistedColorPair> twistedColorPairList) {
+        formattedColorPairListCache = getFormattedColorPairString(twistedColorPairList);
+        System.out.println(formattedColorPairListCache);
     }
  }
 

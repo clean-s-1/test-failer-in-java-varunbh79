@@ -1,17 +1,17 @@
 public class TwistedColorPair {
 
-    private  Integer pair;
+    private  Integer pairNo;
     private  String majorColor;
     private  String minorColor;
 
-    public TwistedColorPair(Integer pair, String majorColor, String minorColor) {
-        this.pair = pair;
+    public TwistedColorPair(Integer pairNo, String majorColor, String minorColor) {
+        this.pairNo = pairNo;
         this.majorColor = majorColor;
         this.minorColor = minorColor;
     }
 
-    public void setPair(Integer pair) {
-        this.pair = pair;
+    public void setpairNo(Integer pairNo) {
+        this.pairNo = pairNo;
     }
 
     public void setMajorColor(String majorColor) {
@@ -22,8 +22,8 @@ public class TwistedColorPair {
         this.minorColor = minorColor;
     }
 
-    public Integer getPair() {
-        return pair;
+    public Integer getpairNo() {
+        return pairNo;
     }
 
     public String getMajorColor() {

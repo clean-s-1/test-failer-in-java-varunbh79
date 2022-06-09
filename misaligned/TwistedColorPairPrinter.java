@@ -2,5 +2,6 @@ import java.util.List;
 
 public interface TwistedColorPairPrinter {
 
-    void printTwistedColorPair(List<TwistedColorPair> twistedPairList);
+    String getFormattedColorPairString(List<TwistedColorPair> twistedColorPairList);
+    void printTwistedColorPair(List<TwistedColorPair> twistedColorPairList);
 }
