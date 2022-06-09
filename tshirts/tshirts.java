@@ -23,12 +23,12 @@ public class tshirts
         assert(size(38).equals("M")):"Invalid Size For Medium";
 
         assert(size(40).equals("M"));
-        assert(size(40).equals("L"));
+        assert(!size(40).equals("L"));
 
         assert (size(42).equals( "L"));
-        assert (size(42).equals("M"));
+        assert (!size(42).equals("M"));
 
-        assert (size(43).equals("M"));
+        assert (!size(43).equals("M"));
         assert(size(43).equals("L"));
 
         System.out.println("All is well (maybe!)");
