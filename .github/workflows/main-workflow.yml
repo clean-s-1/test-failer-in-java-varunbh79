@@ -15,17 +15,27 @@ jobs:
         distribution: 'zulu'
         java-version: '11'
 
-    - name: tshirts fail
+    - name: tshirts pass
       run: |
         cd tshirts
-        bash ../.github/workflows/expectfail.sh java -ea tshirts.java
+        java -ea TshirtsTest.java
 
-    - name: misaligned fail
+    - name: Build
       run: |
         cd misaligned
-        bash ../.github/workflows/expectfail.sh java -ea misaligned.java
+        javac ColorPairMisAlignedTest.java
 
-    - name: alerter fail
+    - name: misaligned pass
+      run: |
+        cd misaligned
+        java -ea  ColorPairMisAlignedTest
+
+    - name: Build
       run: |
         cd alerter
-        bash ../.github/workflows/expectfail.sh java -ea alerter.java
+        javac ThresholdAlerterTest.java    
+
+    - name: alerter pass
+      run: |
+        cd alerter
+        java -ea ThresholdAlerterTest
