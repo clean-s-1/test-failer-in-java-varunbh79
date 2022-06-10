@@ -18,7 +18,7 @@ In this repository, the workflows are designed to make the Action fail when any 
 
 `tshirts` has a simple error. It tries to classify T-shirt sizes based on shoulder-measurements. It leaves out one input value. Add a test to catch that.
 
-`misaligned` tries to print a map from numbers to colors, as per [this Wiki](https://en.wikipedia.org/wiki/25-pair_color_code). However, the numeric values and the separator (`|`) are misaligned. The functionality is not efficiently testable - the fault needs human inspection. Think of separating the concerns and testing them individually.
+`misaligned` tries to print a map from numbers to colors, as per [this Wiki](https://en.wikipedia.org/wiki/25-pairNo_color_code). However, the numeric values and the separator (`|`) are misaligned. The functionality is not efficiently testable - the fault needs human inspection. Think of separating the concerns and testing them individually.
 
 `alerter` sends out an alert over the network when a threshold is breached. The code stubs the network-sendng part, so that we can test without the network. However, there is a mistake in its error-handling and the test doesn't bother to check that part of the code. Adapt the code to cover the error condition and fail due to the mistake.
 

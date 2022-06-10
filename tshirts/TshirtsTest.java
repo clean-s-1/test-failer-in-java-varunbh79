@@ -1,6 +1,6 @@
 
 
-public class tshirts
+public class TshirtsTest
 {
 
     static String size(int cms) {

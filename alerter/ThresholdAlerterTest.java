@@ -1,6 +1,6 @@
 
 
-public class alerter {
+public class ThresholdAlerterTest {
 
     static int alertFailureCount = 0;
 

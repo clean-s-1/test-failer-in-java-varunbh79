@@ -18,24 +18,24 @@ jobs:
     - name: tshirts pass
       run: |
         cd tshirts
-        java -ea tshirts.java
+        java -ea TshirtsTest.java
 
     - name: Build
       run: |
         cd misaligned
-        javac misaligned.java
+        javac ColorPairMisAlignedTest.java
 
     - name: misaligned pass
       run: |
         cd misaligned
-        java -ea  misaligned
+        java -ea  ColorPairMisAlignedTest
 
     - name: Build
       run: |
         cd alerter
-        javac alerter.java    
+        javac ThresholdAlerterTest.java    
 
     - name: alerter pass
       run: |
         cd alerter
-        java -ea alerter
+        java -ea ThresholdAlerterTest
